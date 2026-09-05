@@ -4,26 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>XO Game</title>
+    <title>XO GameDocument</title>
 </head>
-<body class="w-screen h-screen bg-neutral-700">
-    <h1 class="currPlayer text-center text-8xl mb-12"></h1>
-    <div class="cells w-[600px] h-[500px] m-auto grid grid-rows-3 grid-cols-3 gap-4 justify-center content-center place-content-center">
-        <div data-index="0" class="cell font-['Permanent_Marker',cursive] text-9xl text-center content-center bg-slate-600 border border-neutral-500 rounded-3xl cursor-pointer hover:bg-slate-500"></div>
-        <div data-index="1" class="cell font-['Permanent_Marker',cursive] text-9xl text-center content-center bg-slate-600 border border-neutral-500 rounded-3xl cursor-pointer hover:bg-slate-500"></div>
-        <div data-index="2" class="cell font-['Permanent_Marker',cursive] text-9xl text-center content-center bg-slate-600 border border-neutral-500 rounded-3xl cursor-pointer hover:bg-slate-500"></div>
-        <div data-index="3" class="cell font-['Permanent_Marker',cursive] text-9xl text-center content-center bg-slate-600 border border-neutral-500 rounded-3xl cursor-pointer hover:bg-slate-500"></div>
-        <div data-index="4" class="cell font-['Permanent_Marker',cursive] text-9xl text-center content-center bg-slate-600 border border-neutral-500 rounded-3xl cursor-pointer hover:bg-slate-500"></div>
-        <div data-index="5" class="cell font-['Permanent_Marker',cursive] text-9xl text-center content-center bg-slate-600 border border-neutral-500 rounded-3xl cursor-pointer hover:bg-slate-500"></div>
-        <div data-index="6" class="cell font-['Permanent_Marker',cursive] text-9xl text-center content-center bg-slate-600 border border-neutral-500 rounded-3xl cursor-pointer hover:bg-slate-500"></div>
-        <div data-index="7" class="cell font-['Permanent_Marker',cursive] text-9xl text-center content-center bg-slate-600 border border-neutral-500 rounded-3xl cursor-pointer hover:bg-slate-500"></div>
-        <div data-index="8" class="cell font-['Permanent_Marker',cursive] text-9xl text-center content-center bg-slate-600 border border-neutral-500 rounded-3xl cursor-pointer hover:bg-slate-500"></div>
-    </div>
-    <div class="score-reset w-[260px] m-auto mt-8 grid grid-rows-2 gap-2 place-items-center">
-        <h2 class=""></h2>
-        <button class="w-[160px] h-11 text-3xl text-center mt-3 bg-teal-700 hover:bg-teal-800 rounded-xl cursor-pointer row-start-2">Reset</button>
+<body class="w-screen h-screen bg-neutral-700 font-['Permanent_Marker',cursive]">
+    <div class="welcom text-center text-5xl mb-8">Tic-Tac-Toe XO game</div>
+    
+    <select id="options" class="bg-slate-500 p-4 text-2xl rounded-xl border border-gray-600 block m-auto cursor-pointer outline-none">
+        <option value="" disabled selected hidden>Select Game Type</option>
+        <option value="1">1 vs 1</option>
+        <option value="2">1 vs Ai</option>
+    </select>
+
+    <div id="inputs" class="p-10 grid auto-rows-fr gap-10 place-content-center">
+
+        <div id="player1-inp" class="w-fit h-full  grid grid-cols-[auto_1fr] gap-5 auto-cols-auto">
+            <p class="w-12 h-full bg-slate-600 text-sky-500 text-shadow-blue-500 text-shadow-lg/25 p-3 text-4xl rounded-lg grid place-content-center">X</p>
+            <input type="text" class="w-[18.75rem] h-full bg-slate-600 p-4 rounded-lg text-white outline-none" placeholder="Player 1">
+        </div>
+
+        <div id="player1-inp" class="player1-inp w-fit h-full  grid grid-cols-[auto_1fr] gap-5 auto-cols-auto">
+            <p class="w-12 h-full bg-slate-600 text-rose-500 text-shadow-blue-500 text-shadow-lg/25 p-3 text-4xl rounded-lg grid place-content-center">O</p>
+            <input type="text" class="w-[18.75rem] h-full bg-slate-600 p-4 rounded-lg text-white outline-none" placeholder="Player 2">
+        </div>
+
+        <button id="btn" class="w-4/5 bg-slate-600 hover:bg-slate-700 justify-self-center rounded-xl text-white text-2xl active:ring-1 active:ring-slate-400 active:ring-offset-1 active:ring-offset-slate-400 cursor-pointer">Ready to play</button>
     </div>
 
-    <script src="script.js"></script>
+    <script src="./setup.js"></script>
 </body>
 </html>
