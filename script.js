@@ -1,7 +1,7 @@
-const cells = document.querySelectorAll('.cell');
-const currPlayer = document.querySelector('.currPlayer');
-const gameState = document.querySelector('.score-reset h2');
-const resetBtn = document.querySelector('.score-reset button');
+const cells = document.querySelectorAll('#cell');
+const currPlayer = document.querySelector('#currPlayer');
+const gameState = document.querySelector('#score-reset h2');
+const resetBtn = document.querySelector('#score-reset button');
 let isXPlayer = true;
 let currSymbol = ['O', 'X'];
 const board =
@@ -44,10 +44,12 @@ function resetGame() {
 
 function endGame(state) { 
     gameState.innerHTML = state;
+    resetBtn.textContent = "New game";
     setTimeout(_ => resetGame);
 }
 
 resetBtn.addEventListener('click', _ => {
+    resetBtn.textContent = "Reset";
     resetGame();
 })
 
