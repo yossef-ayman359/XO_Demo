@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>XO GameDocument</title>
+    <title>XO Game</title>
 </head>
 <body class="w-screen h-screen bg-neutral-700 font-['Permanent_Marker',cursive]">
     <div class="welcom text-center text-5xl mb-8">Tic-Tac-Toe XO game</div>
@@ -15,14 +15,14 @@
         <option value="2">1 vs Ai</option>
     </select>
 
-    <div id="inputs" class="p-10 grid auto-rows-fr gap-10 place-content-center">
+    <div id="inputs" class="hidden p-10 grid auto-rows-fr gap-10 place-content-center">
 
-        <div id="player1-inp" class="w-fit h-full  grid grid-cols-[auto_1fr] gap-5 auto-cols-auto">
+        <div id="player1-inp" class="hidden w-fit h-full  grid grid-cols-[auto_1fr] gap-5 auto-cols-auto">
             <p class="w-12 h-full bg-slate-600 text-sky-500 text-shadow-blue-500 text-shadow-lg/25 p-3 text-4xl rounded-lg grid place-content-center">X</p>
             <input type="text" class="w-[18.75rem] h-full bg-slate-600 p-4 rounded-lg text-white outline-none" placeholder="Player 1">
         </div>
 
-        <div id="player1-inp" class="player1-inp w-fit h-full  grid grid-cols-[auto_1fr] gap-5 auto-cols-auto">
+        <div id="player2-inp" class="hidden w-fit h-full  grid grid-cols-[auto_1fr] gap-5 auto-cols-auto">
             <p class="w-12 h-full bg-slate-600 text-rose-500 text-shadow-blue-500 text-shadow-lg/25 p-3 text-4xl rounded-lg grid place-content-center">O</p>
             <input type="text" class="w-[18.75rem] h-full bg-slate-600 p-4 rounded-lg text-white outline-none" placeholder="Player 2">
         </div>
@@ -30,6 +30,6 @@
         <button id="btn" class="w-4/5 bg-slate-600 hover:bg-slate-700 justify-self-center rounded-xl text-white text-2xl active:ring-1 active:ring-slate-400 active:ring-offset-1 active:ring-offset-slate-400 cursor-pointer">Ready to play</button>
     </div>
 
-    <script src="./setup.js"></script>
+    <script type="module" src="./setup.js"></script>
 </body>
 </html>
