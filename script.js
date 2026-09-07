@@ -1,10 +1,10 @@
 import Game from "./Game.js";
 
+Game.resetGame();
+
 document.querySelector('#score-reset button').addEventListener('click', _ => {
     Game.resetGame();
 })
-
-Game.resetGame();
 
 document.querySelectorAll('.cell').forEach(cell => {
     cell.addEventListener('click', () => {

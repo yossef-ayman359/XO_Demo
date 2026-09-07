@@ -1,14 +1,9 @@
 class Game {
     static STATUS = {xWin: -2, draw: -1, oWin: 2, inPlay: null, win:2}
-    static #board =
-        [
-            ['', '', ''],
-            ['', '', ''],
-            ['', '', '']
-        ];
-    static #currentPlayer = 'X';
-    static #nextPlayer = 'O';
-    static #gameEnded = false;
+    static #board;
+    static #currentPlayer;
+    static #nextPlayer;
+    static #gameEnded;
 
     static #initLogic() {
         this.#board =
